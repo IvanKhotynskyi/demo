@@ -1,6 +1,7 @@
 package com.knowledgevision.demo;
 
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SimpleController {
 
     @GetMapping(value = "/session/user-details", produces = MediaType.APPLICATION_JSON_VALUE)
+//    @CrossOrigin(origins = "http://localhost:8080")
     public String getUser() {
         return "{\"user_id\":20042,\"name\":\"Vadym Ocheretenyuk\",\"first_name\":\"Vadym\",\"last_name\":\"Ocheretenyuk\"," +
                 "\"email\":\"vadym.ocheretenyuk@openexc.com\",\"auth_provider\":\"Knowledge Vision\",\"secret_key\":\"a3jr6EimQYV5\"," +
